@@ -9,6 +9,7 @@ import android.os.Handler;
 public class SplashActivity extends Activity {
 
     Handler mHandler = new Handler();
+    private boolean isFirst;
 
 
     @Override
@@ -22,6 +23,7 @@ public class SplashActivity extends Activity {
             @Override
             public void run() {
                 Intent intent=new Intent();
+                if(isFirst)
                 intent.setClass(SplashActivity.this,MainActivity.class);
                 startActivity(intent);
             }
